@@ -1,0 +1,71 @@
+
+.filtersTopBar {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.toggleSidebarBtn {
+  padding: 10px 15px;
+  background: #7b2ff7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 40;
+}
+
+
+.sidebarWrapper {
+  position: fixed;
+  top: 0;
+  left: -310px;      
+  width: 280px;
+  height: 100vh;
+  background: #2c2c2c;   
+  z-index: 50;          
+  padding: 20px;
+  overflow-y: auto;
+  transition: left 0.35s ease;
+  border-right: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 3px 0px 12px rgba(0,0,0,0.4);
+}
+
+.sidebarWrapper.open {
+  left: 0; 
+}
+
+
+.layout {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.contentWrapper {
+  flex: 1;
+}
+
+
+.loadMoreBtn {
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  background: #7b2ff7;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}

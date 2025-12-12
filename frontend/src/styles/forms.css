@@ -1,0 +1,43 @@
+.form-center,
+.form-large {
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-color);
+}
+
+.form-center {
+  max-width: 440px;
+  margin: 60px auto;
+}
+
+.form-large {
+  max-width: 720px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input,
+.textarea {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+}
+
+.form-footer {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.macros-row {
+  display: flex;
+  gap: 12px;
+}

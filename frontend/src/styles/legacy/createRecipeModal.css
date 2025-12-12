@@ -1,0 +1,148 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+}
+
+.bento-modal {
+  width: 750px;
+  max-height: 88vh;
+  overflow-y: auto;
+  background: #333;
+  padding: 22px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.bento-box {
+  border: 2px solid #000;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  background: #333;
+}
+
+.bento-row {
+  display: flex;
+  gap: 12px;
+}
+
+.image-box {
+  height: 220px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-placeholder {
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+}
+
+.upload-preview {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 2px solid #000;
+  margin-bottom: 8px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 2px solid #000;
+  padding: 6px 8px;
+  resize: none;
+}
+
+.input.small {
+  width: 100%;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.step-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.step {
+  min-height: 50px;
+}
+
+.add-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  border: 2px solid #000;
+  background: #eaeaea;
+  cursor: pointer;
+}
+
+.remove-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  border: 2px solid red;
+  background: #ffe5e5;
+  cursor: pointer;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #d4ffd4;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: #ffd4d4;
+  cursor: pointer;
+}
+
+.donut {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.donut-segment {
+  fill: transparent;
+  stroke-width: 6;
+  stroke-dasharray: 0 100;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.donut-segment.protein {
+  stroke: #ff4d4d;
+}
+.donut-segment.carbs {
+  stroke: #4db8ff;
+}
+.donut-segment.fat {
+  stroke: #ffd24d;
+}

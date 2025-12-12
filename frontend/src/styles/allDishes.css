@@ -1,0 +1,68 @@
+
+.all-dishes-page {
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.page-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2d2d2d;
+}
+
+
+.recipes-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    margin-top: 25px;
+}
+
+
+.no-results {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+
+.load-more-btn {
+    background-color: #0077ff;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #005ed1;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #555;
+}
+
+
+@media (max-width: 600px) {
+    .all-dishes-page {
+        padding: 20px;
+    }
+    .page-title {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,57 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: recetas_web
+      MYSQL_USER: recetas_user
+      MYSQL_PASSWORD: recetas_pass
+    # ports:
+    #   - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/config/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  backend:
+    build: ./backend
+    container_name: recetas-backend
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=recetas_web
+      - DB_USER=recetas_user
+      - DB_PASS=recetas_pass
+      - SPOONACULAR_API_KEY=10adc59a13b6439784ff31f5b02f5905
+    ports:
+      - "8000:80"
+    volumes:
+      - ./backend:/var/www/html
+
+  frontend:
+    build: ./frontend
+    container_name: recetas-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:

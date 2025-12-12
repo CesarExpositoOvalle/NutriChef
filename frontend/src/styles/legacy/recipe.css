@@ -1,0 +1,132 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222; 
+  width: 100vw;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  height: 100vh; 
+  width: 100vw;
+}
+
+.recipe-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+  padding: 16px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 1200px; 
+}
+
+.info-container {
+  background-color: aqua;
+  grid-column: span 4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; 
+}
+
+.info-container img {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 20px;
+  padding: 5%;
+}
+
+.info-container h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.info-container p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.ingredients-container {
+  grid-column: span 2;
+  background-color: rgba(173, 255, 47, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; 
+  align-self: start; 
+  justify-self: start; 
+}
+
+.macro-container {
+  grid-column: span 2;
+  background-color: rgba(255, 255, 224, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;  
+  align-self: start; 
+  justify-self: start; 
+}
+
+.steps-container {
+  grid-column: span 4;
+  background-color: rgba(210, 180, 140, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto; 
+}
+
+.steps-container p {
+  font-size: 1rem;
+  color: #000;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.steps-container h1,h2{
+  font-family: 'Shrikhand', cursive;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .recipe-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .info-container,
+  .ingredients-container,
+  .macro-container,
+  .steps-container {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+}

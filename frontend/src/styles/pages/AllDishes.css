@@ -1,0 +1,54 @@
+.all-dishes-page {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.no-results {
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 16px;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 10px;
+}
+
+.load-more-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+}
+
+.load-more-btn:hover {
+  background: var(--accent-strong);
+}
+
+.loading-text {
+  color: var(--text-muted);
+}

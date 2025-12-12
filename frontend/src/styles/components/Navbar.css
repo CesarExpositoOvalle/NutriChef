@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+
+.navbar-center {
+  flex: 2;
+  text-align: center;
+}
+
+.navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-links li {
+  font-family: 'Shrikhand', cursive;
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  border-radius: 5px;
+  background-color: lightgrey;
+  color: black;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.navbar-right {
+  flex: 1;
+  text-align: right;
+}
+
+.navbar-account-logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none; 
+  }
+
+  .navbar-hamburger {
+    display: flex; 
+  }
+
+  .navbar-right {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navbar-right img {
+    margin-left: 40px; 
+  }
+
+  .navbar-center.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links a {
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+}

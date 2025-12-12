@@ -1,0 +1,17 @@
+# Node and frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Environment files
+.env
+.env.*
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+*.swp
+
+# PHP upload artifacts
+backend/uploads/*
+!backend/uploads/.gitkeep

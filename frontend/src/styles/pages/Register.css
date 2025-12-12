@@ -1,0 +1,12 @@
+@import "./Login.css";
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.auth-card button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

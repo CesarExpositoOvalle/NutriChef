@@ -1,0 +1,37 @@
+.my-dishes-page {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.create-card {
+  border: 2px dashed var(--accent-soft);
+  background: var(--surface-color);
+  color: var(--accent-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.my-dish-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.my-dish-footer {
+  background: var(--accent-color);
+}
+
+.my-dish-hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.my-icon span {
+  color: #e5e7eb;
+}
